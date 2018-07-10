@@ -1,0 +1,6 @@
+package vm
+
+const PRI_KEY = "5KYZdUEo39z3FPrtuX2QbbwGnNP5zTd7yyr2SC1j299sBCnWjss"
+const PUB_KEY = "04a34b99f22c790c4e36b2b3c2c35a36db06226e41c692fc82b8b56ac1c540c5bd5b8dec5235a0fa8722476c7709c02559e3aa73aa03918ba2d492eea75abea235"
+const HASH_160 = "b5bd079c4d57cc7fc28ecf8213a6b791625b8183"
+const ADDRESS = "1HZwkjkeaoZfTSaJxDw6aKkxp45agDiEzN"
