@@ -1,5 +1,9 @@
 package vm
 
+const (
+	var
+)
+
 // can convert data to []uint8 type
 type Hexable interface {
 	Hex() []uint8
@@ -20,6 +24,7 @@ var Opcodes = make(map[uint8]Opcode, 0)
 
 // init all opcodes
 func init() {
+
 	Opcodes[PushDataOp{}.Hex()[0]] = PushDataOp{}
 	Opcodes[NopOp{}.Hex()[0]] = NopOp{}
 	Opcodes[IfOp{}.Hex()[0]] = IfOp{}

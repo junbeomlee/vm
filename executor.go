@@ -29,7 +29,7 @@ func parseScript(script string) [][]uint8 {
 		hexN := uint8(hexBytes[i])
 
 		//check whether opcode or data
-		if hexN > 0 && hexN < OP_PUSHDATA {
+		if isData(hexN) {
 			//it is a data
 			data := hexBytes[i+1 : i+1+int(hexN)]
 			codes = append(codes, data)
@@ -42,4 +42,8 @@ func parseScript(script string) [][]uint8 {
 	}
 
 	return codes
+}
+
+func isData(hexN uint8) bool {
+	return hexN > 0 && hexN < 0x4b
 }
