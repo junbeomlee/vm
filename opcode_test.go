@@ -6,6 +6,7 @@ import (
 	"testing"
 
 	"github.com/junbeomlee/vm"
+	"github.com/stretchr/testify/assert"
 )
 
 func TestConvertBytesToHex(t *testing.T) {
@@ -34,4 +35,75 @@ func TestGetOpCode(t *testing.T) {
 		hexN := uint8(byte)
 		fmt.Println(vm.GetOpCode(hexN))
 	}
+}
+
+func TestDupOp_Handle(t *testing.T) {
+
+	//given
+	dupOp := vm.DupOp{}
+	stack := vm.NewStack()
+	stack.Push(vm.Data{Body: []uint8{uint8(2)}})
+
+	//when
+	dupOp.Handle(&stack)
+
+	//then
+	assert.Equal(t, 2, stack.Len())
+
+	h1, err := stack.Pop()
+	assert.NoError(t, err)
+	assert.Equal(t, []uint8{uint8(2)}, h1.Hex())
+
+	h2, err := stack.Pop()
+	assert.NoError(t, err)
+	assert.Equal(t, []uint8{uint8(2)}, h2.Hex())
+
+	assert.Equal(t, 0, stack.Len())
+}
+
+func TestEqualOp_Handle(t *testing.T) {
+
+	//given
+	equalOp := vm.EqualOp{}
+	stack := vm.NewStack()
+	stack.Push(vm.Data{Body: []uint8{uint8(2)}})
+	stack.Push(vm.Data{Body: []uint8{uint8(2)}})
+
+	//when
+	equalOp.Handle(&stack)
+
+	h, err := stack.Pop()
+	assert.NoError(t, err)
+
+	assert.Equal(t, h.Hex()[0], vm.OP_TRUE)
+}
+
+func TestEqualOp_Handle_ERROR(t *testing.T) {
+
+	//given
+	equalOp := vm.EqualOp{}
+	stack := vm.NewStack()
+	stack.Push(vm.Data{Body: []uint8{uint8(2)}})
+	stack.Push(vm.Data{Body: []uint8{uint8(1)}})
+
+	//when
+	err := equalOp.Handle(&stack)
+	assert.Error(t, err)
+}
+
+func TestHash160Op_Handle(t *testing.T) {
+	//given
+	hashOp := vm.Hash160Op{}
+	stack := vm.NewStack()
+	stack.Push(vm.Data{Body: []uint8{uint8(2)}})
+
+	//when
+	err := hashOp.Handle(&stack)
+	assert.NoError(t, err)
+
+	//then
+	h, err := stack.Pop()
+	assert.NoError(t, err)
+
+	fmt.Printf("%x", h.Hex())
 }
