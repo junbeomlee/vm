@@ -11,11 +11,17 @@ import (
 // UnLockingScript= <Signature>
 func main() {
 
-	data := []byte("")
-	lockingScript := createLockingScript()
-	unlockingScript := createUnLockingScript()
+	pri, pub := vm.GenerateKeyPair()
 
-	result, err := vm.Run(lockingScript, unlockingScript, data)
+	fmt.Printf("%s", pub)
+
+	digest := []byte("")
+	sig := vm.Sign(pri, digest)
+
+	lockingScript := createLockingScript(pub)
+	unlockingScript := createUnLockingScript(sig)
+
+	result, err := vm.Run(lockingScript, unlockingScript, digest)
 
 	if err != nil {
 		panic(err.Error())
@@ -30,10 +36,11 @@ func main() {
 	fmt.Printf("this script is vaild ? [%b]", v)
 }
 
-func createLockingScript() string {
-	return ""
+func createLockingScript(pub []byte) string {
+
+	return string(append(pub, vm.OP_CHECK_SIG)[:])
 }
 
-func createUnLockingScript() string {
-	return ""
+func createUnLockingScript(sig []byte) string {
+	return string(sig[:])
 }

@@ -54,7 +54,11 @@ func ParseScript(script string) []Hexable {
 	asm := make([]Hexable, 0)
 
 	//convert string to hexbytes
-	hexBytes, _ := hex.DecodeString(script)
+	hexBytes, err := hex.DecodeString(script)
+
+	if err != nil {
+		panic(err)
+	}
 
 	for i := 0; i < len(hexBytes); i++ {
 
@@ -81,6 +85,10 @@ func ParseScript(script string) []Hexable {
 func CheckScriptType(lockingScript string) ScriptType {
 
 	ls := ParseScript(lockingScript)
+
+	for _, l := range ls {
+		fmt.Println(l)
+	}
 
 	if len(ls) == 2 && ls[1].Hex()[0] == OP_CHECK_SIG {
 		return P2PK
