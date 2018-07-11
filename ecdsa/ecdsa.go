@@ -104,12 +104,11 @@ func Verify(pubKey *ecdsa.PublicKey, signature, digest []byte) (bool, error) {
 	}
 
 	return valid, nil
-
 }
 
 func GetRandomPairKey() (*ecdsa.PrivateKey, *ecdsa.PublicKey) {
 
-	privateKey, _ := ecdsa.GenerateKey(elliptic.P384(), rand.Reader)
+	privateKey, _ := ecdsa.GenerateKey(elliptic.P256(), rand.Reader)
 	publicKey := &privateKey.PublicKey
 
 	return privateKey, publicKey
@@ -118,6 +117,7 @@ func GetRandomPairKey() (*ecdsa.PrivateKey, *ecdsa.PublicKey) {
 func PriToPEM(key *ecdsa.PrivateKey) ([]byte, error) {
 
 	keyData, err := x509.MarshalECPrivateKey(key)
+
 	if err != nil {
 		return nil, err
 	}

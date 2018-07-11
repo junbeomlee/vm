@@ -27,3 +27,25 @@ func TestVerify(t *testing.T) {
 	assert.NoError(t, err)
 	assert.True(t, v)
 }
+
+func TestPriToPEM(t *testing.T) {
+
+	//given
+	pri, _ := ecdsa.GetRandomPairKey()
+
+	b, err := ecdsa.PriToPEM(pri)
+	assert.NoError(t, err)
+
+	fmt.Printf("%s", b)
+}
+
+func TestPubToPEM(t *testing.T) {
+
+	//given
+	_, pub := ecdsa.GetRandomPairKey()
+
+	b, err := ecdsa.PubToPEM(pub)
+	assert.NoError(t, err)
+
+	fmt.Printf("%s", b)
+}
