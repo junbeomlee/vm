@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30df1ad9-b250-41a3-97fd-31e199314090" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/sample_key.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecdsa/ecdsa.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ecdsa/ecdsa_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sample_key_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/executor.go" beforeDir="false" afterPath="$PROJECT_DIR$/executor.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opcode.go" beforeDir="false" afterPath="$PROJECT_DIR$/opcode.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/opcode_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/opcode_test.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,35 +22,8 @@
       <file leaf-file-name="opcode.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/opcode.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-89">
-              <caret line="197" column="21" lean-forward="true" selection-start-line="197" selection-start-column="21" selection-end-line="197" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sample_key.go" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sample_key.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="executor_test.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/executor_test.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="32" column="8" lean-forward="true" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="opcode_test.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/opcode_test.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="99" column="10" lean-forward="true" selection-start-line="99" selection-start-column="10" selection-end-line="99" selection-end-column="10" />
+            <state relative-caret-position="3420">
+              <caret line="235" column="1" lean-forward="true" selection-start-line="235" selection-start-column="1" selection-end-line="235" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -53,8 +31,92 @@
       <file leaf-file-name="executor.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/executor.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="55" column="35" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="35" />
+            <state relative-caret-position="585">
+              <caret line="48" column="1" lean-forward="true" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
+              <folding>
+                <element signature="e#12#55#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ecdsa.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ecdsa/ecdsa.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="214">
+              <caret line="125" column="19" lean-forward="true" selection-start-line="125" selection-start-column="19" selection-end-line="125" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ecdsa_test.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ecdsa/ecdsa_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+              <folding>
+                <element signature="e#20#103#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="executor_test.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/executor_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="opcode_test.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/opcode_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="117" column="38" selection-start-line="117" selection-start-column="38" selection-end-line="117" selection-end-column="38" />
+              <folding>
+                <element signature="e#17#186#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="script.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/script.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="10" lean-forward="true" selection-start-column="10" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="script_test.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/script_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sample_key.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sample_key.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="58" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sample_key_test.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sample_key_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="271">
+              <caret line="46" column="20" lean-forward="true" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+              <folding>
+                <element signature="e#12#145#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -71,6 +133,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>ADDRESS</find>
+      <find>b5bd079c4d57cc7fc28ecf8213a6b791625b8183</find>
     </findStrings>
   </component>
   <component name="GOROOT" path="/usr/local/Cellar/go/1.10/libexec" />
@@ -85,11 +148,16 @@
         <option value="$PROJECT_DIR$/script_test.go" />
         <option value="$PROJECT_DIR$/stack.go" />
         <option value="$PROJECT_DIR$/stack_test.go" />
+        <option value="$PROJECT_DIR$/sample_key.go" />
+        <option value="$PROJECT_DIR$/sampe_ket_test.go" />
         <option value="$PROJECT_DIR$/executor.go" />
         <option value="$PROJECT_DIR$/executor_test.go" />
+        <option value="$PROJECT_DIR$/ecdsa.go" />
         <option value="$PROJECT_DIR$/opcode.go" />
+        <option value="$PROJECT_DIR$/ecdsa/ecdsa.go" />
+        <option value="$PROJECT_DIR$/sample_key_test.go" />
+        <option value="$PROJECT_DIR$/ecdsa/ecdsa_test.go" />
         <option value="$PROJECT_DIR$/opcode_test.go" />
-        <option value="$PROJECT_DIR$/sample_key.go" />
       </list>
     </option>
   </component>
@@ -120,6 +188,11 @@
               <item name="vm" type="b2602c69:ProjectViewProjectNode" />
               <item name="vm" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="vm" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vm" type="462c0819:PsiDirectoryNode" />
+              <item name="ecdsa" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -135,6 +208,11 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ecdsa" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -147,8 +225,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.TestHash160Op_Handle in github.com/junbeomlee/vm">
-    <configuration name="TestDupOp_Handle in github.com/junbeomlee/vm" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.TestVerify in github.com/junbeomlee/vm/ecdsa">
+    <configuration name="TestCheckSigOp_Do in github.com/junbeomlee/vm" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="vm" />
       <working_directory value="$PROJECT_DIR$" />
       <go_parameters value="-i" />
@@ -157,9 +235,9 @@
       <package value="github.com/junbeomlee/vm" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestDupOp_Handle$" />
+      <pattern value="^TestCheckSigOp_Do$" />
     </configuration>
-    <configuration name="TestEqualOp_Handle in github.com/junbeomlee/vm" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestConvertBytesToHex in github.com/junbeomlee/vm" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="vm" />
       <working_directory value="$PROJECT_DIR$" />
       <go_parameters value="-i" />
@@ -168,29 +246,7 @@
       <package value="github.com/junbeomlee/vm" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestEqualOp_Handle$" />
-    </configuration>
-    <configuration name="TestEqualOp_Handle_ERROR in github.com/junbeomlee/vm" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="vm" />
-      <working_directory value="$PROJECT_DIR$" />
-      <go_parameters value="-i" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="github.com/junbeomlee/vm" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestEqualOp_Handle_ERROR$" />
-    </configuration>
-    <configuration name="TestHash160Op_Handle in github.com/junbeomlee/vm" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="vm" />
-      <working_directory value="$PROJECT_DIR$" />
-      <go_parameters value="-i" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="github.com/junbeomlee/vm" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestHash160Op_Handle$" />
+      <pattern value="^TestConvertBytesToHex$" />
     </configuration>
     <configuration name="TestRun in github.com/junbeomlee/vm" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="vm" />
@@ -203,57 +259,78 @@
       <filePath value="$PROJECT_DIR$/" />
       <pattern value="^TestRun$" />
     </configuration>
+    <configuration name="TestVerify in github.com/junbeomlee/vm/ecdsa" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="vm" />
+      <working_directory value="$PROJECT_DIR$/ecdsa" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/junbeomlee/vm/ecdsa" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestVerify$" />
+    </configuration>
+    <configuration name="go test github.com/junbeomlee/vm" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="vm" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/junbeomlee/vm" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+    </configuration>
     <list>
+      <item itemvalue="Go Test.go test github.com/junbeomlee/vm" />
+      <item itemvalue="Go Test.TestConvertBytesToHex in github.com/junbeomlee/vm" />
       <item itemvalue="Go Test.TestRun in github.com/junbeomlee/vm" />
-      <item itemvalue="Go Test.TestDupOp_Handle in github.com/junbeomlee/vm" />
-      <item itemvalue="Go Test.TestEqualOp_Handle in github.com/junbeomlee/vm" />
-      <item itemvalue="Go Test.TestEqualOp_Handle_ERROR in github.com/junbeomlee/vm" />
-      <item itemvalue="Go Test.TestHash160Op_Handle in github.com/junbeomlee/vm" />
+      <item itemvalue="Go Test.TestCheckSigOp_Do in github.com/junbeomlee/vm" />
+      <item itemvalue="Go Test.TestVerify in github.com/junbeomlee/vm/ecdsa" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.TestHash160Op_Handle in github.com/junbeomlee/vm" />
-        <item itemvalue="Go Test.TestEqualOp_Handle_ERROR in github.com/junbeomlee/vm" />
-        <item itemvalue="Go Test.TestEqualOp_Handle in github.com/junbeomlee/vm" />
-        <item itemvalue="Go Test.TestDupOp_Handle in github.com/junbeomlee/vm" />
+        <item itemvalue="Go Test.TestVerify in github.com/junbeomlee/vm/ecdsa" />
+        <item itemvalue="Go Test.TestCheckSigOp_Do in github.com/junbeomlee/vm" />
         <item itemvalue="Go Test.TestRun in github.com/junbeomlee/vm" />
+        <item itemvalue="Go Test.go test github.com/junbeomlee/vm" />
+        <item itemvalue="Go Test.TestConvertBytesToHex in github.com/junbeomlee/vm" />
       </list>
     </recent_temporary>
   </component>
   <component name="TestHistory">
-    <history-entry file="TestHash160Op_Handle_in_github_com_junbeomlee_vm - 2018.07.10 at 21h 53m 16s.xml">
-      <configuration name="TestHash160Op_Handle in github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestEqualOp_Handle_in_github_com_junbeomlee_vm - 2018.07.11 at 13h 25m 52s.xml">
+      <configuration name="TestEqualOp_Handle in github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestHash160Op_Handle_in_github_com_junbeomlee_vm - 2018.07.10 at 21h 53m 32s.xml">
-      <configuration name="TestHash160Op_Handle in github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
+    <history-entry file="go_test_github_com_junbeomlee_vm - 2018.07.11 at 13h 25m 57s.xml">
+      <configuration name="go test github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestHash160Op_Handle_in_github_com_junbeomlee_vm - 2018.07.10 at 21h 56m 09s.xml">
-      <configuration name="TestHash160Op_Handle in github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
+    <history-entry file="go_test_github_com_junbeomlee_vm - 2018.07.11 at 14h 22m 42s.xml">
+      <configuration name="go test github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestHash160Op_Handle_in_github_com_junbeomlee_vm - 2018.07.10 at 21h 56m 33s.xml">
-      <configuration name="TestHash160Op_Handle in github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
+    <history-entry file="go_test_github_com_junbeomlee_vm - 2018.07.11 at 14h 23m 51s.xml">
+      <configuration name="go test github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestHash160Op_Handle_in_github_com_junbeomlee_vm - 2018.07.10 at 21h 57m 23s.xml">
-      <configuration name="TestHash160Op_Handle in github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestConvertBytesToHex_in_github_com_junbeomlee_vm - 2018.07.11 at 14h 23m 57s.xml">
+      <configuration name="TestConvertBytesToHex in github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestHash160Op_Handle_in_github_com_junbeomlee_vm - 2018.07.10 at 21h 57m 43s.xml">
-      <configuration name="TestHash160Op_Handle in github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
+    <history-entry file="go_test_github_com_junbeomlee_vm - 2018.07.11 at 14h 24m 00s.xml">
+      <configuration name="go test github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestHash160Op_Handle_in_github_com_junbeomlee_vm - 2018.07.10 at 21h 58m 03s.xml">
-      <configuration name="TestHash160Op_Handle in github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestRun_in_github_com_junbeomlee_vm - 2018.07.11 at 14h 33m 21s.xml">
+      <configuration name="TestRun in github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestHash160Op_Handle_in_github_com_junbeomlee_vm - 2018.07.10 at 21h 58m 52s.xml">
-      <configuration name="TestHash160Op_Handle in github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestCheckSigOp_Do_in_github_com_junbeomlee_vm - 2018.07.11 at 14h 35m 59s.xml">
+      <configuration name="TestCheckSigOp_Do in github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestHash160Op_Handle_in_github_com_junbeomlee_vm - 2018.07.10 at 21h 59m 33s.xml">
-      <configuration name="TestHash160Op_Handle in github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestCheckSigOp_Do_in_github_com_junbeomlee_vm - 2018.07.11 at 14h 52m 51s.xml">
+      <configuration name="TestCheckSigOp_Do in github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestHash160Op_Handle_in_github_com_junbeomlee_vm - 2018.07.10 at 22h 00m 07s.xml">
-      <configuration name="TestHash160Op_Handle in github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestVerify_in_github_com_junbeomlee_vm_ecdsa - 2018.07.11 at 14h 59m 13s.xml">
+      <configuration name="TestVerify in github.com/junbeomlee/vm/ecdsa" configurationId="GoTestRunConfiguration" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="978" extended-state="6" />
+    <frame x="0" y="24" width="1680" height="978" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22283272" />
@@ -296,24 +373,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="11" />
+      <option name="time" value="12" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/executor.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="11" lean-forward="true" selection-start-line="36" selection-start-column="11" selection-end-line="36" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/executor_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -468,6 +531,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="e#12#55#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -539,24 +605,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script_test.go">
+    <entry file="file:///usr/local/Cellar/go/1.10/libexec/src/io/io.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="187">
+          <caret line="90" column="4" selection-start-line="90" selection-start-column="4" selection-end-line="90" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script.go">
+    <entry file="file:///usr/local/Cellar/go/1.10/libexec/src/crypto/ecdsa/ecdsa.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="10" lean-forward="true" selection-start-column="10" selection-end-column="10" />
+        <state relative-caret-position="180">
+          <caret line="102" column="63" selection-start-line="102" selection-start-column="53" selection-end-line="102" selection-end-column="63" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stack_test.go">
+    <entry file="file:///usr/local/Cellar/go/1.10/libexec/src/encoding/pem/pem.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+        <state relative-caret-position="33">
+          <caret line="26" column="5" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -570,38 +636,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/executor.go">
+    <entry file="file://$PROJECT_DIR$/stack_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="55" column="35" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="35" />
+        <state relative-caret-position="225">
+          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/executor_test.go">
+    <entry file="file://$PROJECT_DIR$/script.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="32" column="8" lean-forward="true" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+        <state>
+          <caret column="10" lean-forward="true" selection-start-column="10" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/opcode_test.go">
+    <entry file="file://$PROJECT_DIR$/script_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="99" column="10" lean-forward="true" selection-start-line="99" selection-start-column="10" selection-end-line="99" selection-end-column="10" />
+        <state relative-caret-position="15">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/opcode.go">
+    <entry file="file://$PROJECT_DIR$/sample_key_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-89">
-          <caret line="197" column="21" lean-forward="true" selection-start-line="197" selection-start-column="21" selection-end-line="197" selection-end-column="21" />
+        <state relative-caret-position="271">
+          <caret line="46" column="20" lean-forward="true" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+          <folding>
+            <element signature="e#12#145#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sample_key.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="60">
+          <caret line="4" column="58" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opcode.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3420">
+          <caret line="235" column="1" lean-forward="true" selection-start-line="235" selection-start-column="1" selection-end-line="235" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/executor.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="48" column="1" lean-forward="true" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
+          <folding>
+            <element signature="e#12#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecdsa/ecdsa.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="125" column="19" lean-forward="true" selection-start-line="125" selection-start-column="19" selection-end-line="125" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecdsa/ecdsa_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <folding>
+            <element signature="e#20#103#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/executor_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/opcode_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="117" column="38" selection-start-line="117" selection-start-column="38" selection-end-line="117" selection-end-column="38" />
+          <folding>
+            <element signature="e#17#186#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

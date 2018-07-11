@@ -5,10 +5,7 @@ import (
 	"crypto/sha256"
 	"errors"
 
-	"fmt"
-
-	"encoding/hex"
-
+	"github.com/junbeomlee/vm/ecdsa"
 	"golang.org/x/crypto/ripemd160"
 )
 
@@ -42,14 +39,14 @@ func (d Data) Hex() []uint8 {
 }
 
 // do something with stack
-type StackHandler interface {
-	Handle(stack *Stack) error
+type Operator interface {
+	Do(stack *Stack, txHash []byte) error
 }
 
 // opcode can do something with stack and convert data to []uint8 type
 type Opcode interface {
 	Hexable
-	StackHandler
+	Operator
 }
 
 var Opcodes = make(map[uint8]Opcode, 0)
@@ -77,7 +74,7 @@ func (PushDataOp) Hex() []uint8 {
 	return []uint8{OP_PUSHDATA}
 }
 
-func (PushDataOp) Handle(stack *Stack) error {
+func (PushDataOp) Do(stack *Stack, txHash []byte) error {
 	//do nothing
 	return nil
 }
@@ -89,7 +86,7 @@ func (DupOp) Hex() []uint8 {
 }
 
 // pop first element and push twice
-func (DupOp) Handle(stack *Stack) error {
+func (DupOp) Do(stack *Stack, txHash []byte) error {
 
 	h, err := stack.Pop()
 
@@ -110,7 +107,7 @@ func (o EqualOp) Hex() []uint8 {
 	return []uint8{OP_EQUAL}
 }
 
-func (o EqualOp) Handle(stack *Stack) error {
+func (o EqualOp) Do(stack *Stack, txHash []byte) error {
 
 	h1, err := stack.Pop()
 
@@ -139,7 +136,7 @@ func (o EqualVerifyOp) Hex() []uint8 {
 	return []uint8{OP_EQUAL_VERIFY}
 }
 
-func (o EqualVerifyOp) Handle(stack *Stack) error {
+func (o EqualVerifyOp) Do(stack *Stack, txHash []byte) error {
 
 	h1, err := stack.Pop()
 
@@ -169,7 +166,39 @@ func (CheckSigOp) Hex() []uint8 {
 	return []uint8{OP_CHECK_SIG}
 }
 
-func (CheckSigOp) Handle(stack *Stack) error {
+func (CheckSigOp) Do(stack *Stack, txHash []byte) error {
+
+	p, err := stack.Pop()
+
+	if err != nil {
+		return err
+	}
+
+	pubKey, err := ecdsa.Decode(p.Hex())
+
+	if err != nil {
+		return err
+	}
+
+	sig, err := stack.Pop()
+
+	if err != nil {
+		return err
+	}
+
+	valid, err := ecdsa.Verify(pubKey, sig.Hex(), txHash)
+
+	if err != nil {
+		return err
+	}
+
+	if !valid {
+		stack.Push(Data{Body: []uint8{OP_TRUE}})
+		return nil
+	}
+
+	stack.Push(Data{Body: []uint8{OP_TRUE}})
+
 	return nil
 }
 
@@ -181,7 +210,7 @@ func (Hash160Op) Hex() []uint8 {
 	return []uint8{OP_HASH_160}
 }
 
-func (Hash160Op) Handle(stack *Stack) error {
+func (Hash160Op) Do(stack *Stack, txHash []byte) error {
 
 	h1, err := stack.Pop()
 
@@ -189,29 +218,15 @@ func (Hash160Op) Handle(stack *Stack) error {
 		return err
 	}
 
-	dst := make([]byte, hex.EncodedLen(len(h1.Hex())))
-
-	hex.Encode(dst, h1.Hex())
-
-	fmt.Println(dst)
-
 	s := sha256.New()
-	s.Write(dst)
+	s.Write(h1.Hex())
 	bs := s.Sum(nil)
 
 	r := ripemd160.New()
 	r.Write(bs)
 	hashed := r.Sum(nil)
 
-	fmt.Println(hashed)
-
-	dst2 := make([]uint8, hex.DecodedLen(len(hashed)))
-	hex.Decode(dst2, hashed)
-	fmt.Println(dst2)
-
 	stack.Push(Data{Body: hashed})
-
-	fmt.Println(hashed)
 
 	return nil
 }
@@ -224,7 +239,8 @@ func (CheckMultiSigOp) Hex() []uint8 {
 	return []uint8{OP_CHECKMULTI_SIG}
 }
 
-func (CheckMultiSigOp) Handle(stack *Stack) error {
+func (CheckMultiSigOp) Do(stack *Stack, txHash []byte) error {
+	panic("not implemented")
 	return nil
 }
 

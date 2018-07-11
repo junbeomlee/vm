@@ -38,7 +38,8 @@ func Run(lockingScript string, unlockingScript string, txHash []byte) (Stack, er
 		opCode, ok := h.(Opcode)
 
 		if ok {
-			opCode.Handle(&stack)
+			opCode.Do(&stack, txHash)
+			continue
 		}
 
 		stack.Push(h)

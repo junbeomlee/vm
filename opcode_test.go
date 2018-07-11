@@ -5,7 +5,10 @@ import (
 	"fmt"
 	"testing"
 
+	ecdsa2 "crypto/ecdsa"
+
 	"github.com/junbeomlee/vm"
+	"github.com/junbeomlee/vm/ecdsa"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -45,7 +48,7 @@ func TestDupOp_Handle(t *testing.T) {
 	stack.Push(vm.Data{Body: []uint8{uint8(2)}})
 
 	//when
-	dupOp.Handle(&stack)
+	dupOp.Do(&stack, []byte{})
 
 	//then
 	assert.Equal(t, 2, stack.Len())
@@ -70,7 +73,7 @@ func TestEqualOp_Handle(t *testing.T) {
 	stack.Push(vm.Data{Body: []uint8{uint8(2)}})
 
 	//when
-	equalOp.Handle(&stack)
+	equalOp.Do(&stack, []byte{})
 
 	h, err := stack.Pop()
 	assert.NoError(t, err)
@@ -87,23 +90,49 @@ func TestEqualOp_Handle_ERROR(t *testing.T) {
 	stack.Push(vm.Data{Body: []uint8{uint8(1)}})
 
 	//when
-	err := equalOp.Handle(&stack)
+	err := equalOp.Do(&stack, []byte{})
 	assert.Error(t, err)
 }
 
 func TestHash160Op_Handle(t *testing.T) {
+
 	//given
 	hashOp := vm.Hash160Op{}
 	stack := vm.NewStack()
-	stack.Push(vm.Data{Body: []uint8{uint8(2)}})
+
+	b1, _ := hex.DecodeString(vm.PUB_KEY)
+	stack.Push(vm.Data{Body: b1})
 
 	//when
-	err := hashOp.Handle(&stack)
+	err := hashOp.Do(&stack, []byte{})
 	assert.NoError(t, err)
 
 	//then
 	h, err := stack.Pop()
 	assert.NoError(t, err)
 
-	fmt.Printf("%x", h.Hex())
+	b, _ := hex.DecodeString(vm.HASH_160)
+	assert.Equal(t, h.Hex(), b)
+}
+
+func TestCheckSigOp_Do(t *testing.T) {
+
+	hashOp := vm.Hash160Op{}
+	stack := vm.NewStack()
+
+	b1, _ := hex.DecodeString(vm.PUB_KEY)
+	stack.Push(vm.Data{Body: b1})
+}
+
+func getSigAndPub(t *testing.T) ([]byte, *ecdsa2.PublicKey) {
+
+	pri, pub := ecdsa.GetRandomPairKey()
+
+	message := "hello world"
+	digest := []byte(message)
+
+	sig, err := ecdsa.Sign(pri, digest)
+	assert.NoError(t, err)
+
+	return sig, pub
 }
