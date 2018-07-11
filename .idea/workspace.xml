@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30df1ad9-b250-41a3-97fd-31e199314090" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/ecdsa/ecdsa.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ecdsa/ecdsa_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sample_key_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/executor.go" beforeDir="false" afterPath="$PROJECT_DIR$/executor.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/opcode.go" beforeDir="false" afterPath="$PROJECT_DIR$/opcode.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/opcode_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/opcode_test.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -73,8 +67,8 @@
       <file leaf-file-name="opcode_test.go" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/opcode_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="117" column="38" selection-start-line="117" selection-start-column="38" selection-end-line="117" selection-end-column="38" />
+            <state relative-caret-position="361">
+              <caret line="131" column="30" selection-start-line="131" selection-start-column="30" selection-end-line="131" selection-end-column="30" />
               <folding>
                 <element signature="e#17#186#0" expanded="true" />
               </folding>
@@ -225,7 +219,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.TestVerify in github.com/junbeomlee/vm/ecdsa">
+  <component name="RunManager" selected="Go Test.TestCheckSigOp_Do in github.com/junbeomlee/vm">
     <configuration name="TestCheckSigOp_Do in github.com/junbeomlee/vm" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="vm" />
       <working_directory value="$PROJECT_DIR$" />
@@ -289,8 +283,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.TestVerify in github.com/junbeomlee/vm/ecdsa" />
         <item itemvalue="Go Test.TestCheckSigOp_Do in github.com/junbeomlee/vm" />
+        <item itemvalue="Go Test.TestVerify in github.com/junbeomlee/vm/ecdsa" />
         <item itemvalue="Go Test.TestRun in github.com/junbeomlee/vm" />
         <item itemvalue="Go Test.go test github.com/junbeomlee/vm" />
         <item itemvalue="Go Test.TestConvertBytesToHex in github.com/junbeomlee/vm" />
@@ -298,18 +292,6 @@
     </recent_temporary>
   </component>
   <component name="TestHistory">
-    <history-entry file="TestEqualOp_Handle_in_github_com_junbeomlee_vm - 2018.07.11 at 13h 25m 52s.xml">
-      <configuration name="TestEqualOp_Handle in github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="go_test_github_com_junbeomlee_vm - 2018.07.11 at 13h 25m 57s.xml">
-      <configuration name="go test github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="go_test_github_com_junbeomlee_vm - 2018.07.11 at 14h 22m 42s.xml">
-      <configuration name="go test github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="go_test_github_com_junbeomlee_vm - 2018.07.11 at 14h 23m 51s.xml">
-      <configuration name="go test github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
-    </history-entry>
     <history-entry file="TestConvertBytesToHex_in_github_com_junbeomlee_vm - 2018.07.11 at 14h 23m 57s.xml">
       <configuration name="TestConvertBytesToHex in github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
     </history-entry>
@@ -328,18 +310,30 @@
     <history-entry file="TestVerify_in_github_com_junbeomlee_vm_ecdsa - 2018.07.11 at 14h 59m 13s.xml">
       <configuration name="TestVerify in github.com/junbeomlee/vm/ecdsa" configurationId="GoTestRunConfiguration" />
     </history-entry>
+    <history-entry file="TestCheckSigOp_Do_in_github_com_junbeomlee_vm - 2018.07.11 at 15h 18m 31s.xml">
+      <configuration name="TestCheckSigOp_Do in github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestCheckSigOp_Do_in_github_com_junbeomlee_vm - 2018.07.11 at 15h 18m 55s.xml">
+      <configuration name="TestCheckSigOp_Do in github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestCheckSigOp_Do_in_github_com_junbeomlee_vm - 2018.07.11 at 15h 19m 10s.xml">
+      <configuration name="TestCheckSigOp_Do in github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="TestCheckSigOp_Do_in_github_com_junbeomlee_vm - 2018.07.11 at 15h 19m 19s.xml">
+      <configuration name="TestCheckSigOp_Do in github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="24" width="1680" height="978" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22283272" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22283272" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3291714" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3291714" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
@@ -717,8 +711,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/opcode_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="117" column="38" selection-start-line="117" selection-start-column="38" selection-end-line="117" selection-end-column="38" />
+        <state relative-caret-position="361">
+          <caret line="131" column="30" selection-start-line="131" selection-start-column="30" selection-end-line="131" selection-end-column="30" />
           <folding>
             <element signature="e#17#186#0" expanded="true" />
           </folding>

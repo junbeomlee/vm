@@ -5,8 +5,6 @@ import (
 	"fmt"
 	"testing"
 
-	ecdsa2 "crypto/ecdsa"
-
 	"github.com/junbeomlee/vm"
 	"github.com/junbeomlee/vm/ecdsa"
 	"github.com/stretchr/testify/assert"
@@ -117,14 +115,24 @@ func TestHash160Op_Handle(t *testing.T) {
 
 func TestCheckSigOp_Do(t *testing.T) {
 
-	hashOp := vm.Hash160Op{}
+	sig, pub, digest := getSigAndPubAndDigest(t)
+
+	checkSigOp := vm.CheckSigOp{}
 	stack := vm.NewStack()
 
-	b1, _ := hex.DecodeString(vm.PUB_KEY)
-	stack.Push(vm.Data{Body: b1})
+	stack.Push(vm.Data{Body: sig})
+	stack.Push(vm.Data{Body: pub})
+
+	err := checkSigOp.Do(&stack, digest)
+	assert.NoError(t, err)
+
+	h, err := stack.Pop()
+	assert.NoError(t, err)
+
+	assert.Equal(t, h.Hex()[0], vm.OP_TRUE)
 }
 
-func getSigAndPub(t *testing.T) ([]byte, *ecdsa2.PublicKey) {
+func getSigAndPubAndDigest(t *testing.T) ([]byte, []byte, []byte) {
 
 	pri, pub := ecdsa.GetRandomPairKey()
 
@@ -134,5 +142,8 @@ func getSigAndPub(t *testing.T) ([]byte, *ecdsa2.PublicKey) {
 	sig, err := ecdsa.Sign(pri, digest)
 	assert.NoError(t, err)
 
-	return sig, pub
+	pem, err := ecdsa.PubToPEM(pub)
+	assert.NoError(t, err)
+
+	return sig, pem, digest
 }
