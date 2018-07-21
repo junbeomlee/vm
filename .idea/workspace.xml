@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30df1ad9-b250-41a3-97fd-31e199314090" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/util.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ecdsa/ecdsa_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/ecdsa/ecdsa_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/p2pk.go" beforeDir="false" afterPath="$PROJECT_DIR$/example/p2pk.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/executor.go" beforeDir="false" afterPath="$PROJECT_DIR$/executor.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/script_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/util_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/util_test.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,12 +18,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file leaf-file-name="p2pk.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/example/p2pk.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="31" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="18" selection-end-column="31" />
+            <state relative-caret-position="240">
+              <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
               <folding>
                 <element signature="e#14#60#0" expanded="true" />
               </folding>
@@ -30,25 +31,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="util_test.go" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/util_test.go">
+      <file leaf-file-name="ecdsa_test.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ecdsa/ecdsa_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="651">
+              <caret line="61" column="23" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
               <folding>
-                <element signature="e#17#74#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="util.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/util.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="20" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="20" />
-              <folding>
-                <element signature="e#12#84#0" expanded="true" />
+                <element signature="e#20#179#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,18 +71,18 @@
         <option value="$PROJECT_DIR$/stack.go" />
         <option value="$PROJECT_DIR$/stack_test.go" />
         <option value="$PROJECT_DIR$/sampe_ket_test.go" />
-        <option value="$PROJECT_DIR$/executor_test.go" />
         <option value="$PROJECT_DIR$/ecdsa.go" />
         <option value="$PROJECT_DIR$/opcode.go" />
         <option value="$PROJECT_DIR$/sample_key_test.go" />
-        <option value="$PROJECT_DIR$/opcode_test.go" />
-        <option value="$PROJECT_DIR$/sample_key.go" />
         <option value="$PROJECT_DIR$/ecdsa/ecdsa.go" />
         <option value="$PROJECT_DIR$/executor.go" />
-        <option value="$PROJECT_DIR$/ecdsa/ecdsa_test.go" />
-        <option value="$PROJECT_DIR$/util.go" />
+        <option value="$PROJECT_DIR$/sample_key.go" />
+        <option value="$PROJECT_DIR$/executor_test.go" />
         <option value="$PROJECT_DIR$/example/p2pk.go" />
+        <option value="$PROJECT_DIR$/opcode_test.go" />
+        <option value="$PROJECT_DIR$/util.go" />
         <option value="$PROJECT_DIR$/util_test.go" />
+        <option value="$PROJECT_DIR$/ecdsa/ecdsa_test.go" />
       </list>
     </option>
   </component>
@@ -106,9 +95,9 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
-    <option name="width" value="840" />
+    <option name="width" value="1680" />
     <option name="height" value="978" />
   </component>
   <component name="ProjectView">
@@ -116,7 +105,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -138,6 +126,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -166,15 +155,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.TestSignAndVerify in github.com/junbeomlee/vm">
-    <configuration name="go build p2pk.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.TestKey in github.com/junbeomlee/vm/ecdsa">
+    <configuration name="TestGenerateKeyPair in github.com/junbeomlee/vm" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="vm" />
-      <working_directory value="$PROJECT_DIR$/" />
+      <working_directory value="$PROJECT_DIR$" />
       <go_parameters value="-i" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/example/p2pk.go" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
       <package value="github.com/junbeomlee/vm" />
       <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestGenerateKeyPair$" />
     </configuration>
     <configuration name="TestKey in github.com/junbeomlee/vm/ecdsa" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="vm" />
@@ -187,29 +178,7 @@
       <filePath value="$PROJECT_DIR$/" />
       <pattern value="^TestKey$" />
     </configuration>
-    <configuration name="TestPriToPEM in github.com/junbeomlee/vm/ecdsa" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="vm" />
-      <working_directory value="$PROJECT_DIR$/ecdsa" />
-      <go_parameters value="-i" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="github.com/junbeomlee/vm/ecdsa" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestPriToPEM$" />
-    </configuration>
-    <configuration name="TestPubToPEM in github.com/junbeomlee/vm/ecdsa" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
-      <module name="vm" />
-      <working_directory value="$PROJECT_DIR$/ecdsa" />
-      <go_parameters value="-i" />
-      <framework value="gotest" />
-      <kind value="PACKAGE" />
-      <package value="github.com/junbeomlee/vm/ecdsa" />
-      <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestPubToPEM$" />
-    </configuration>
-    <configuration name="TestSignAndVerify in github.com/junbeomlee/vm" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="TestParseScript in github.com/junbeomlee/vm" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="vm" />
       <working_directory value="$PROJECT_DIR$" />
       <go_parameters value="-i" />
@@ -218,91 +187,100 @@
       <package value="github.com/junbeomlee/vm" />
       <directory value="$PROJECT_DIR$/" />
       <filePath value="$PROJECT_DIR$/" />
-      <pattern value="^TestSignAndVerify$" />
+      <pattern value="^TestParseScript$" />
+    </configuration>
+    <configuration name="TestParseScript2 in github.com/junbeomlee/vm" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="vm" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/junbeomlee/vm" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestParseScript2$" />
+    </configuration>
+    <configuration name="go test github.com/junbeomlee/vm" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="vm" />
+      <working_directory value="$PROJECT_DIR$" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/junbeomlee/vm" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
     </configuration>
     <list>
-      <item itemvalue="Go Test.TestPriToPEM in github.com/junbeomlee/vm/ecdsa" />
-      <item itemvalue="Go Test.TestPubToPEM in github.com/junbeomlee/vm/ecdsa" />
-      <item itemvalue="Go Build.go build p2pk.go" />
+      <item itemvalue="Go Test.TestParseScript2 in github.com/junbeomlee/vm" />
+      <item itemvalue="Go Test.go test github.com/junbeomlee/vm" />
+      <item itemvalue="Go Test.TestGenerateKeyPair in github.com/junbeomlee/vm" />
+      <item itemvalue="Go Test.TestParseScript in github.com/junbeomlee/vm" />
       <item itemvalue="Go Test.TestKey in github.com/junbeomlee/vm/ecdsa" />
-      <item itemvalue="Go Test.TestSignAndVerify in github.com/junbeomlee/vm" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Test.TestSignAndVerify in github.com/junbeomlee/vm" />
-        <item itemvalue="Go Build.go build p2pk.go" />
         <item itemvalue="Go Test.TestKey in github.com/junbeomlee/vm/ecdsa" />
-        <item itemvalue="Go Test.TestPubToPEM in github.com/junbeomlee/vm/ecdsa" />
-        <item itemvalue="Go Test.TestPriToPEM in github.com/junbeomlee/vm/ecdsa" />
+        <item itemvalue="Go Test.TestParseScript in github.com/junbeomlee/vm" />
+        <item itemvalue="Go Test.TestParseScript2 in github.com/junbeomlee/vm" />
+        <item itemvalue="Go Test.TestGenerateKeyPair in github.com/junbeomlee/vm" />
+        <item itemvalue="Go Test.go test github.com/junbeomlee/vm" />
       </list>
     </recent_temporary>
   </component>
   <component name="TestHistory">
-    <history-entry file="TestCheckSigOp_Do_in_github_com_junbeomlee_vm - 2018.07.11 at 15h 19m 28s.xml">
-      <configuration name="TestCheckSigOp_Do in github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestGenerateKeyPair_in_github_com_junbeomlee_vm - 2018.07.11 at 18h 05m 40s.xml">
+      <configuration name="TestGenerateKeyPair in github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestPriToPEM_in_github_com_junbeomlee_vm_ecdsa - 2018.07.11 at 15h 26m 19s.xml">
-      <configuration name="TestPriToPEM in github.com/junbeomlee/vm/ecdsa" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestGenerateKeyPair_in_github_com_junbeomlee_vm - 2018.07.11 at 18h 06m 38s.xml">
+      <configuration name="TestGenerateKeyPair in github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestPriToPEM_in_github_com_junbeomlee_vm_ecdsa - 2018.07.11 at 15h 26m 41s.xml">
-      <configuration name="TestPriToPEM in github.com/junbeomlee/vm/ecdsa" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestGenerateKeyPair_in_github_com_junbeomlee_vm - 2018.07.11 at 18h 06m 51s.xml">
+      <configuration name="TestGenerateKeyPair in github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestPriToPEM_in_github_com_junbeomlee_vm_ecdsa - 2018.07.11 at 15h 30m 34s.xml">
-      <configuration name="TestPriToPEM in github.com/junbeomlee/vm/ecdsa" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestGenerateKeyPair_in_github_com_junbeomlee_vm - 2018.07.11 at 18h 06m 58s.xml">
+      <configuration name="TestGenerateKeyPair in github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestPubToPEM_in_github_com_junbeomlee_vm_ecdsa - 2018.07.11 at 15h 33m 22s.xml">
-      <configuration name="TestPubToPEM in github.com/junbeomlee/vm/ecdsa" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestGenerateKeyPair_in_github_com_junbeomlee_vm - 2018.07.11 at 18h 07m 09s.xml">
+      <configuration name="TestGenerateKeyPair in github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestKey_in_github_com_junbeomlee_vm_ecdsa - 2018.07.11 at 17h 22m 00s.xml">
-      <configuration name="TestKey in github.com/junbeomlee/vm/ecdsa" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestGenerateKeyPair_in_github_com_junbeomlee_vm - 2018.07.11 at 18h 07m 14s.xml">
+      <configuration name="TestGenerateKeyPair in github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestKey_in_github_com_junbeomlee_vm_ecdsa - 2018.07.11 at 17h 22m 19s.xml">
-      <configuration name="TestKey in github.com/junbeomlee/vm/ecdsa" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestGenerateKeyPair_in_github_com_junbeomlee_vm - 2018.07.11 at 18h 07m 25s.xml">
+      <configuration name="TestGenerateKeyPair in github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestKey_in_github_com_junbeomlee_vm_ecdsa - 2018.07.11 at 17h 22m 24s.xml">
-      <configuration name="TestKey in github.com/junbeomlee/vm/ecdsa" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestParseScript2_in_github_com_junbeomlee_vm - 2018.07.11 at 18h 09m 17s.xml">
+      <configuration name="TestParseScript2 in github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestSignAndVerify_in_github_com_junbeomlee_vm - 2018.07.11 at 17h 40m 14s.xml">
-      <configuration name="TestSignAndVerify in github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestParseScript2_in_github_com_junbeomlee_vm - 2018.07.11 at 18h 09m 49s.xml">
+      <configuration name="TestParseScript2 in github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
     </history-entry>
-    <history-entry file="TestSignAndVerify_in_github_com_junbeomlee_vm - 2018.07.11 at 17h 40m 22s.xml">
-      <configuration name="TestSignAndVerify in github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
+    <history-entry file="TestParseScript_in_github_com_junbeomlee_vm - 2018.07.11 at 18h 10m 38s.xml">
+      <configuration name="TestParseScript in github.com/junbeomlee/vm" configurationId="GoTestRunConfiguration" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1680" height="978" extended-state="6" />
+    <frame x="0" y="23" width="1680" height="978" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22283272" />
-      <window_info anchor="bottom" id="TODO" order="12" />
-      <window_info anchor="bottom" id="Event Log" order="18" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25885227" />
+      <window_info anchor="bottom" id="TODO" order="13" />
+      <window_info anchor="bottom" id="Event Log" order="16" side_tool="true" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3291714" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="15" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="5" weight="0.3291714" />
+      <window_info anchor="bottom" id="Version Control" order="14" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39954597" />
+      <window_info anchor="bottom" id="Terminal" order="17" />
+      <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25579977" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="TODO" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" />
-      <window_info anchor="bottom" id="Run" order="5" visible="true" weight="0.3291714" />
-      <window_info anchor="bottom" id="Database Changes" order="15" show_stripe_button="false" />
-      <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="16" side_tool="true" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
       <window_info anchor="bottom" id="Find" order="4" />
-      <window_info anchor="bottom" id="Terminal" order="17" />
-      <window_info id="Favorites" order="2" side_tool="true" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -313,17 +291,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="14" />
+      <option name="time" value="15" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/script_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/opcode_test.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -362,13 +333,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="29" column="47" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/script.go" />
     <entry file="file://$PROJECT_DIR$/opcode.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="316">
@@ -376,13 +341,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/script.go" />
     <entry file="file://$PROJECT_DIR$/executor.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="540">
@@ -431,9 +390,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="e#17#69#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -515,13 +471,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/data.go" />
     <entry file="file:///usr/local/Cellar/go/1.10/libexec/src/io/io.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -543,6 +493,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///usr/local/Cellar/go/1.10/libexec/src/crypto/elliptic/elliptic.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="378" column="15" lean-forward="true" selection-start-line="378" selection-start-column="15" selection-end-line="378" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/go/1.10/libexec/src/runtime/panic.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="590" selection-start-line="590" selection-end-line="590" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/local/Cellar/go/1.10/libexec/src/encoding/hex/hex.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/executor.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="64" column="27" lean-forward="true" selection-start-line="64" selection-start-column="27" selection-end-line="64" selection-end-column="27" />
+          <folding>
+            <element signature="e#12#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/script.go" />
+    <entry file="file://$PROJECT_DIR$/script_test.go" />
     <entry file="file://$PROJECT_DIR$/stack.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
@@ -560,44 +543,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/script_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sample_key_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="46" column="20" lean-forward="true" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+        <state relative-caret-position="293">
+          <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ecdsa/ecdsa.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
           <folding>
-            <element signature="e#12#145#0" expanded="true" />
+            <element signature="e#15#145#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opcode_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1695">
-          <caret line="113" column="1" lean-forward="true" selection-start-line="113" selection-start-column="1" selection-end-line="113" selection-end-column="1" />
-          <folding>
-            <element signature="e#17#186#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/script.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="10" lean-forward="true" selection-start-column="10" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/opcode.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3420">
-          <caret line="235" column="1" lean-forward="true" selection-start-line="235" selection-start-column="1" selection-end-line="235" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -608,80 +567,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/Cellar/go/1.10/libexec/src/crypto/elliptic/elliptic.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="378" column="15" lean-forward="true" selection-start-line="378" selection-start-column="15" selection-end-line="378" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/executor_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="25" column="1" lean-forward="true" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
+        <state relative-caret-position="255">
+          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ecdsa/ecdsa.go">
+    <entry file="file://$PROJECT_DIR$/opcode_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        <state relative-caret-position="436">
+          <caret line="148" column="1" selection-start-line="148" selection-start-column="1" selection-end-line="148" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/executor.go">
+    <entry file="file://$PROJECT_DIR$/util.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#12#55#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="451">
+          <caret line="49" column="1" selection-start-line="49" selection-start-column="1" selection-end-line="49" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/local/Cellar/go/1.10/libexec/src/runtime/panic.go">
+    <entry file="file://$PROJECT_DIR$/opcode.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="590" selection-start-line="590" selection-end-line="590" />
+        <state relative-caret-position="335">
+          <caret line="226" column="24" selection-start-line="220" selection-start-column="4" selection-end-line="226" selection-end-column="24" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ecdsa/ecdsa_test.go">
+    <entry file="file://$PROJECT_DIR$/util_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="606">
-          <caret line="58" selection-start-line="58" selection-end-line="63" selection-end-column="81" />
-          <folding>
-            <element signature="e#20#156#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="211">
+          <caret line="59" column="29" lean-forward="true" selection-start-line="59" selection-start-column="29" selection-end-line="59" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/example/p2pk.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="31" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="18" selection-end-column="31" />
+        <state relative-caret-position="240">
+          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
           <folding>
             <element signature="e#14#60#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util.go">
+    <entry file="file://$PROJECT_DIR$/ecdsa/ecdsa_test.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="20" />
+        <state relative-caret-position="651">
+          <caret line="61" column="23" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
           <folding>
-            <element signature="e#12#84#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/util_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-          <folding>
-            <element signature="e#17#74#0" expanded="true" />
+            <element signature="e#20#179#0" expanded="true" />
           </folding>
         </state>
       </provider>

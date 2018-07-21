@@ -62,7 +62,7 @@ func ParseScript(script string) []Hexable {
 
 	for i := 0; i < len(hexBytes); i++ {
 
-		hexN := uint8(hexBytes[i])
+		hexN := hexBytes[i]
 
 		//check whether opcode or data
 		//hex between 0 and 0x4b is not an opcode but a data, The next byte contains the number of bytes to be pushed onto the stack.

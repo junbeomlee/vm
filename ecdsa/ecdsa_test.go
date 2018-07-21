@@ -59,6 +59,8 @@ func TestKey(t *testing.T) {
 	curve := elliptic.P256()
 	private, err := ecdsa2.GenerateKey(curve, rand.Reader)
 
+	fmt.Println(private)
+
 	assert.NoError(t, err)
 
 	pubKey := append(private.PublicKey.X.Bytes(), private.PublicKey.Y.Bytes()...)

@@ -11,16 +11,6 @@ import (
 // UnLockingScript= <Signature>
 func main() {
 
-	pri, pub := vm.GenerateKeyPair()
-
-	fmt.Printf("%s", pub)
-
-	digest := []byte("")
-	sig := vm.Sign(pri, digest)
-
-	lockingScript := createLockingScript(pub)
-	unlockingScript := createUnLockingScript(sig)
-
 	result, err := vm.Run(lockingScript, unlockingScript, digest)
 
 	if err != nil {
